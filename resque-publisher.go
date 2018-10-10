@@ -1,6 +1,9 @@
 package queuepublisher
 
-import "github.com/kavu/go-resque"
+import (
+    "github.com/kavu/go-resque"
+    _ "github.com/kavu/go-resque/go-redis" // Redis client from godis package
+)
 
 type ResquePublisher struct {
     client           interface{}
