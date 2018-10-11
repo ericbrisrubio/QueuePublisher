@@ -26,4 +26,9 @@ func main() {
 }
 ```
 
+### **Developer notes:**
+- In case a new implementation needs to be added just implements *IQueuePublisher* interface
+- Add a new case to the switch in *factoryEnqueuer.go* file
+
+
 ### **MIT LICENSE**
