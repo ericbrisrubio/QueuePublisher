@@ -10,7 +10,7 @@ type ResquePublisher struct {
     clientDriverName string
 }
 
-func (rp *ResquePublisher) publishToQueue(queue string, class string, data map[string]interface{}) error {
+func (rp *ResquePublisher) PublishToQueue(queue string, class string, data map[string]interface{}) error {
     enqueuer := resque.NewRedisEnqueuer(rp.clientDriverName, rp.client, "resque:") // Create enqueuer instance
 
     // Enqueue the job into the "go" queue with appropriate client
